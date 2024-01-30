@@ -38,20 +38,20 @@ Das ist eine einfache Go-Anwendung, die die IPv4- und IPv6-Adressen des Clients 
 8. Curl Script zum extrahieren der Werte über die Bash
 
    ```bash
-#!/bin/bash
+   #!/bin/bash
 
-# HTTP-Anfrage an die Go-Anwendung senden und Antwort in Variable speichern
-response=$(curl -s http://localhost:8080/getip)
+   # HTTP-Anfrage an die Go-Anwendung senden und Antwort in Variable speichern
+   response=$(curl -s http://localhost:8080/getip)
 
-# IPv4-Adresse aus JSON extrahieren
-ipv4_address=$(echo "$response" | jq -r .ipv4_address)
+   # IPv4-Adresse aus JSON extrahieren
+   ipv4_address=$(echo "$response" | jq -r .ipv4_address)
 
-# IPv6-Adresse aus JSON extrahieren
-ipv6_address=$(echo "$response" | jq -r .ipv6_address)
+   # IPv6-Adresse aus JSON extrahieren
+   ipv6_address=$(echo "$response" | jq -r .ipv6_address)
 
-# Ausgabe der Adressen
-echo "IPv4-Adresse: $ipv4_address"
-echo "IPv6-Adresse: $ipv6_address"
+   # Ausgabe der Adressen
+   echo "IPv4-Adresse: $ipv4_address"
+   echo "IPv6-Adresse: $ipv6_address"
    ```
 
 ## Anpassungen
