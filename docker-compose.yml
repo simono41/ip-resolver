@@ -24,7 +24,7 @@ services:
     labels:
       - flame.type=application
       - flame.name=Get IP
-      - flame.url=https://ip.brothertec.eu
+      - flame.url=https://ip.brothertec.eu/getip
       - flame.icon=ip
 
     networks:
